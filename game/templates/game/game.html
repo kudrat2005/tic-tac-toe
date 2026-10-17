@@ -1,0 +1,105 @@
+{% extends 'game/base.html' %}
+
+{% block title %}
+Tic Tac Toe | DSA Project
+{% endblock %}
+
+{% block content %}
+
+<header class="header">
+    <h1>🎮 Tic Tac Toe</h1>
+    <p>Classic Strategy Game</p>
+</header>
+
+<div class="game-container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <h2>🏆 Score Board</h2>
+
+        <table class="score-table">
+
+            <tr>
+                <th>Player</th>
+                <th>Score</th>
+            </tr>
+
+            <tr>
+                <td>❌ Player X</td>
+                <td id="scoreX">0</td>
+            </tr>
+
+            <tr>
+                <td>⭕ Player O</td>
+                <td id="scoreO">0</td>
+            </tr>
+
+            <tr>
+                <td>🤝 Draw</td>
+                <td id="drawScore">0</td>
+            </tr>
+
+        </table>
+
+        <div class="stats">
+
+            <h2>📊 Game Stats</h2>
+
+            <p>Total Matches : <span id="matches">0</span></p>
+
+            <p>Current Turn : <span id="turn">X</span></p>
+
+        </div>
+
+        <button id="restart">
+            🔄 Restart Game
+        </button>
+        <button id="undo">
+       ↩ Undo Move
+  </button>
+
+    </div>
+
+    <!-- Game Area -->
+    <div class="game-area">
+
+        <div class="board">
+
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+
+        </div>
+
+        <p id="status">Player X's Turn</p>
+
+    </div>
+
+</div>
+
+<!-- Winner Popup -->
+
+<div id="winnerPopup" class="popup">
+
+    <div class="popup-content">
+
+        <h1 id="winnerText">🏆 Winner</h1>
+
+        <button onclick="closePopup()">
+            Play Again
+        </button>
+
+    </div>
+
+</div>
+
+{% endblock %}

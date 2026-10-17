@@ -1,0 +1,53 @@
+{% extends 'game/base.html' %}
+
+{% block title %}
+Home | Tic Tac Toe
+{% endblock %}
+
+{% block content %}
+
+<div class="home-container">
+
+    <div class="hero">
+
+        <h1>🎮 Tic Tac Toe</h1>
+
+        <p>
+            Challenge your friends in this classic strategy game.
+            Built using <strong>Django</strong>, <strong>JavaScript</strong> and
+            <strong>DSA Concepts</strong>.
+        </p>
+
+        <a href="{% url 'game' %}">
+            <button class="start-btn">
+                🚀 Start Game
+            </button>
+        </a>
+
+    </div>
+
+    <div class="features">
+
+        <div class="feature-card">
+            🧠
+            <h3>DSA Based</h3>
+            <p>Uses Arrays, Stack and Game Logic.</p>
+        </div>
+
+        <div class="feature-card">
+            ⚡
+            <h3>Fast Gameplay</h3>
+            <p>Play instantly with smooth animations.</p>
+        </div>
+
+        <div class="feature-card">
+            🏆
+            <h3>Track Scores</h3>
+            <p>Keep score and challenge your friends.</p>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
